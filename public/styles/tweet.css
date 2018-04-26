@@ -7,10 +7,14 @@
   margin-right: 2em;
   height: 250px ;
   background: white;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
+
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 #tweets-container img{
@@ -57,7 +61,8 @@
 
 #tweets-container .footer p{
   padding-left: 1em;
-  line-height: 8px;
+  line-height: 3px;
+
 }
 
 #tweets-container .footer i{
