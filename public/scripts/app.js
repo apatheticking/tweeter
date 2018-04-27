@@ -5,6 +5,9 @@
  */
 
 //------------- functions -----------------
+
+//this function creates the new tweeet by taking the new tweetData
+//and places it into a HTML template
 function createTweetElement(tweetData){
   return $(`<article>
           <header>
@@ -28,12 +31,16 @@ function createTweetElement(tweetData){
         </article>`)
 }
 
+//takes the tweeet information from the database and appends it to the
+//main page after running it through the createTweetElement function
 function renderTweets(data) {
   for(var tweet in data){
     $('#tweets-container').prepend(createTweetElement(data[tweet]));
   }
 }
 
+//performs the fetch request from the database and the passes it to the
+//render tweets function
 function loadTweets(){
   $.ajax({
     url: 'tweets',
@@ -44,7 +51,7 @@ function loadTweets(){
   });
 }
 
-//-------- stops external javascript
+//-------- stops external javascript ----------
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -54,6 +61,7 @@ function escape(str) {
 //-------- jquery handlers -------------
 $( document ).ready(function() {
 
+//when you click the compose tweet button, this will handle the response
 $("#compose").on('click', function(e){
   $(".new-tweet").slideToggle();
   $(".new-tweet textarea").focus();

@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- MongoDB
+- Chance
+
+## Running the Tweeter App
+
+- Install all the dependencies using the 'npm install' command
+- Run the application by using the command 'npm run local'
